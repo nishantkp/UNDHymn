@@ -43,6 +43,10 @@ public class TrackAdapter extends ArrayAdapter<TrackDetail> {
         TextView trackNameTextView = listView.findViewById(R.id.song_list_item_track_name);
         trackNameTextView.setText(currentTrack.getSongName().toString());
 
+        // Find the textView for track artist name from song_list_item.xml and set the text
+        TextView trackArtistTextView = listView.findViewById(R.id.song_list_item_track_artist);
+        trackArtistTextView.setText(currentTrack.getArtistName().toString());
+
         // Find the imageView for album art from song_list_item.xml and set the image
         ImageView albumArt = listView.findViewById(R.id.song_list_item_track_album_art);
         albumArt.setImageResource(currentTrack.getAlbumArt());
