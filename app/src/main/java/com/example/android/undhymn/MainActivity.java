@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Find textView with id main_songs_activity
+        // Find textView with id main_songs_activity_link
         TextView songsTextView = findViewById(R.id.main_songs_activity_link);
         // Attach a listener to  textView to listen to any touch event
         songsTextView.setOnClickListener(new View.OnClickListener() {
@@ -24,6 +24,21 @@ public class MainActivity extends AppCompatActivity {
                  * to {@link SongsActivity}
                  */
                 Intent intent = new Intent(MainActivity.this, SongsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Find textView with id main_playlist_activity_link
+        TextView playlistTextView = findViewById(R.id.main_playlist_activity_link);
+        // Attach a listener to  textView to listen to any touch event
+        playlistTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /**
+                 * When user clicks the Playlist, then start a new intent to navigate
+                 * to {@link PlaylistActivity}
+                 */
+                Intent intent = new Intent(MainActivity.this, PlaylistActivity.class);
                 startActivity(intent);
             }
         });
