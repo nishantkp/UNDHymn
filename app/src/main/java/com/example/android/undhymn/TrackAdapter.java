@@ -21,7 +21,7 @@ public class TrackAdapter extends ArrayAdapter<TrackDetail> {
     /* Context of App */
     private Context mContext;
 
-    public TrackAdapter(@NonNull Context context, int resource, @NonNull List<TrackDetail> trackList) {
+    public TrackAdapter(@NonNull Context context, @NonNull List<TrackDetail> trackList) {
         super(context, 0, trackList);
         mContext = context;
     }

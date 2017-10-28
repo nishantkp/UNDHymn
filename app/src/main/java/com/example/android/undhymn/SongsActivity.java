@@ -2,6 +2,7 @@ package com.example.android.undhymn;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -25,5 +26,11 @@ public class SongsActivity extends AppCompatActivity {
         trackDetails.add(new TrackDetail("Photograph", "Ed Sheeran", R.drawable.album_placeholder));
         trackDetails.add(new TrackDetail("Alone", "Marshmello", R.drawable.album_placeholder));
         trackDetails.add(new TrackDetail("Dusk Till Dawn", "Zyan Feat. Sia", R.drawable.album_placeholder));
+
+        ListView listView = findViewById(R.id.songs_list);
+
+        TrackAdapter trackAdapter = new TrackAdapter(this, trackDetails);
+        listView.setAdapter(trackAdapter);
+
     }
 }
