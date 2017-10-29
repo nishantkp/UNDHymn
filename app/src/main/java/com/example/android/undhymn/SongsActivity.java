@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class SongsActivity extends AppCompatActivity {
 
     private ArrayList<TrackDetail> trackDetails;
+    private static final int IDENTIFIER = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class SongsActivity extends AppCompatActivity {
 
         ListView listView = findViewById(R.id.songs_list);
 
-        TrackAdapter trackAdapter = new TrackAdapter(this, trackDetails);
+        TrackAdapter trackAdapter = new TrackAdapter(this, trackDetails, IDENTIFIER);
         listView.setAdapter(trackAdapter);
 
         // Attach listener on list item view to play a song when clicked on

@@ -21,36 +21,80 @@ public class TrackAdapter extends ArrayAdapter<TrackDetail> {
     /* Context of App */
     private Context mContext;
 
-    public TrackAdapter(@NonNull Context context, @NonNull List<TrackDetail> trackList) {
+    /* ListView item to inflate */
+    private View mListView;
+
+    /* Current object either song or artist */
+    private TrackDetail mCurrentItem;
+
+    /**
+     * Identifier for artist list or song list
+     * i.e  1 : It's songs list
+     *      2 : artist list
+     * */
+    private int mIdentifier;
+
+    public TrackAdapter(@NonNull Context context, @NonNull List<TrackDetail> trackList, int identifier) {
         super(context, 0, trackList);
         mContext = context;
+        mIdentifier = identifier;
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        View listView = convertView;
-        if(listView == null){
-            listView = LayoutInflater.from(mContext)
+        mListView = convertView;
+        if(mListView == null){
+            mListView = LayoutInflater.from(mContext)
                     .inflate(R.layout.song_list_item, parent, false);
         }
 
         // Get the current track
-        TrackDetail currentTrack = getItem(position);
+        mCurrentItem = getItem(position);
 
-        // Find the textView for track name from song_list_item.xml and set the text
-        TextView trackNameTextView = listView.findViewById(R.id.song_list_item_track_name);
-        trackNameTextView.setText(currentTrack.getSongName().toString());
+        switch (mIdentifier){
+            case 1:
+                // Use list item layout to display track detail
+                displayTrack();
+                break;
+            case 2:
+                // Use list item layout to display artist detail
+                displayArtist();
+                break;
+        }
+        return mListView;
+    }
+
+    // Display the song name, song artist and album cover
+    private void displayTrack(){
+        // Find the TextView for displaying track name from song_list_item.xml and set the text
+        TextView trackNameTextView = mListView  .findViewById(R.id.song_list_item_track_name);
+        trackNameTextView.setText(mCurrentItem.getSongName().toString());
 
         // Find the textView for track artist name from song_list_item.xml and set the text
-        TextView trackArtistTextView = listView.findViewById(R.id.song_list_item_track_artist);
-        trackArtistTextView.setText(currentTrack.getArtistName().toString());
+        TextView trackArtistTextView = mListView.findViewById(R.id.song_list_item_track_artist);
+        trackArtistTextView.setVisibility(View.VISIBLE);
+        trackArtistTextView.setText(mCurrentItem.getArtistName().toString());
 
         // Find the imageView for album art from song_list_item.xml and set the image
-        ImageView albumArt = listView.findViewById(R.id.song_list_item_track_album_art);
-        albumArt.setImageResource(currentTrack.getAlbumArt());
+        ImageView albumArt = mListView.findViewById(R.id.song_list_item_track_album_art);
+        albumArt.setImageResource(mCurrentItem.getAlbumArt());
+    }
 
-        return listView;
+    // Display the name of artist and photo of artist
+    private void displayArtist(){
+        // Find the TextView for displaying artist name from song_list_item.xml and set the text
+        TextView trackNameTextView = mListView  .findViewById(R.id.song_list_item_track_name);
+        trackNameTextView.setText(mCurrentItem.getArtistName().toString());
+
+        // Find the ImageView for displaying artist photo from song_list_item.xml and set the image
+        ImageView artistPhoto = mListView.findViewById(R.id.song_list_item_track_album_art);
+        artistPhoto.setImageResource(mCurrentItem.getArtistPhoto());
+
+        // Find the other TextView and set visibility to GONE,
+        // because we only need artist image and name
+        TextView textView = mListView.findViewById(R.id.song_list_item_track_artist);
+        textView.setVisibility(View.GONE);
     }
 }
