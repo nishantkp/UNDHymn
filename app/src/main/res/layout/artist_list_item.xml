@@ -10,7 +10,7 @@
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/album_placeholder" />
+        android:src="@drawable/artist_placeholder" />
 
     <TextView
         android:id="@+id/artist_list_item_name"
