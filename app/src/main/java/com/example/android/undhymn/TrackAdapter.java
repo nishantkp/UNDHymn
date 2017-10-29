@@ -47,7 +47,7 @@ public class TrackAdapter extends ArrayAdapter<TrackDetail> {
         mListView = convertView;
         if (mListView == null) {
             mListView = LayoutInflater.from(mContext)
-                    .inflate(R.layout.song_list_item, parent, false);
+                    .inflate(R.layout.song_detail_list_item, parent, false);
         }
 
         // Get the current track
@@ -68,28 +68,28 @@ public class TrackAdapter extends ArrayAdapter<TrackDetail> {
 
     // Display the song name, song artist and album cover
     private void displayTrack() {
-        // Find the TextView for displaying track name from song_list_item.xml and set the text
+        // Find the TextView for displaying track name from song_detail_list_item.xml and set the text
         TextView trackNameTextView = mListView.findViewById(R.id.song_list_item_track_name);
         trackNameTextView.setText(mCurrentItem.getSongName().toString());
 
-        // Find the textView for track artist name from song_list_item.xml and set the text
+        // Find the textView for track artist name from song_detail_list_item.xml and set the text
         TextView trackArtistTextView = mListView.findViewById(R.id.song_list_item_track_artist);
         trackArtistTextView.setVisibility(View.VISIBLE);
         trackArtistTextView.setText(mCurrentItem.getArtistName().toString());
 
-        // Find the imageView for album art from song_list_item.xml and set the image
+        // Find the imageView for album art from song_detail_list_item_item.xml and set the image
         ImageView albumArt = mListView.findViewById(R.id.song_list_item_track_album_art);
         albumArt.setImageResource(mCurrentItem.getAlbumArt());
     }
 
     // Display the name of artist and photo of artist
     private void displayArtist() {
-        // Find the TextView for displaying artist name from song_list_item.xml and set the text
+        // Find the TextView for displaying artist name from song_detail_list_item.xml and set the text
         TextView trackNameTextView = mListView.findViewById(R.id.song_list_item_track_name);
         trackNameTextView.setText(mCurrentItem.getArtistName().toString());
         trackNameTextView.setTextSize(16);
 
-        // Find the ImageView for displaying artist photo from song_list_item.xml and set the image
+        // Find the ImageView for displaying artist photo from song_detail_list_item.xml and set the image
         ImageView artistPhoto = mListView.findViewById(R.id.song_list_item_track_album_art);
         artistPhoto.setImageResource(mCurrentItem.getArtistPhoto());
 
