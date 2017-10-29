@@ -9,7 +9,8 @@
         android:id="@+id/grid_item_album_cover"
         android:layout_width="125dp"
         android:layout_height="125dp"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/album_placeholder"/>
 
     <TextView
         android:id="@+id/grid_item_album_name"
