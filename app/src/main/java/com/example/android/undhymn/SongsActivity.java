@@ -19,6 +19,11 @@ public class SongsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_songs);
 
+        // Set the action bar elevation to 0dp
+        getSupportActionBar().setElevation(0);
+
+        View header = View.inflate(this, R.layout.header_songs_list_view, null);
+
         // Create an arrayList of an object TrackDetail
         trackDetails = new ArrayList<>();
         // Add details about songs in ArrayList
@@ -34,7 +39,8 @@ public class SongsActivity extends AppCompatActivity {
         trackDetails.add(new TrackDetail("Dusk Till Dawn", "Zyan Feat. Sia", R.drawable.dusk_till_dawn_zayn_malik));
 
         ListView listView = findViewById(R.id.songs_list);
-
+        // Attach a header to ListView
+        listView.addHeaderView(header);
         TrackAdapter trackAdapter = new TrackAdapter(this, trackDetails, IDENTIFIER);
         listView.setAdapter(trackAdapter);
 

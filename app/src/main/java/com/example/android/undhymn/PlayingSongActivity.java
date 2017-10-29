@@ -15,6 +15,9 @@ public class PlayingSongActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playing_song);
 
+        // Set the action bar elevation to 0dp
+        getSupportActionBar().setElevation(0);
+
         // Receive the intent send by {@link SongsActivity}
         Intent intent = getIntent();
         // Get name of the song with key "song_name"

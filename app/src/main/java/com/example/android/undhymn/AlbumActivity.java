@@ -13,6 +13,9 @@ public class AlbumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
 
+        // Set the action bar elevation to 0dp
+        getSupportActionBar().setElevation(0);
+
         // Create an arrayList of an object TrackDetail
         ArrayList<TrackDetail> trackDetails = new ArrayList<>();
         // Add details about songs in ArrayList
@@ -25,8 +28,7 @@ public class AlbumActivity extends AppCompatActivity {
         trackDetails.add(new TrackDetail("3","Hall Of Fame", "The Script", R.drawable.hall_of_fame));
         trackDetails.add(new TrackDetail("x","Photograph", "Ed Sheeran", R.drawable.sweet_disaster));
 
-        GridView gridView = findViewById(R.id.grid_view_album);
-
+        GridView gridView = findViewById(R.id.grid_view_album);/**/
         GridAlbumAdapter gridAlbumAdapter = new GridAlbumAdapter(this, trackDetails);
         gridView.setAdapter(gridAlbumAdapter);
     }

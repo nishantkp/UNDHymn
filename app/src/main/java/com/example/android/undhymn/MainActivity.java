@@ -13,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Set the action bar elevation to 0dp
+        getSupportActionBar().setElevation(0);
+
         // Find TextView with id main_songs_activity_link
         TextView songsTextView = findViewById(R.id.main_songs_activity_link);
         // Attach a listener to  textView to listen to any touch event

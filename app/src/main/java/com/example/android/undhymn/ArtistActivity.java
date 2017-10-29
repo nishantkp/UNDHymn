@@ -1,15 +1,13 @@
 package com.example.android.undhymn;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class ArtistActivity extends Activity {
+public class ArtistActivity extends AppCompatActivity {
 
     /* Identifier for TrackAdapter to accurately display artist list item */
     private static final int IDENTIFIER = 2;
@@ -19,13 +17,9 @@ public class ArtistActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_songs);
 
-        // Find the id page_title from activity_songs.xml and set text
-        TextView pageTitle = findViewById(R.id.page_title);
-        pageTitle.setText("Artist");
-
-        // Find the shuffle button from activity_song.xml and set visibility to GONE
-        Button shuffleButton = findViewById(R.id.shuffle_button);
-        shuffleButton.setVisibility(View.GONE);
+        // Set the action bar elevation to 0dp
+        getSupportActionBar().setElevation(0);
+        View header = View.inflate(this, R.layout.header_artist_list_view, null);
 
         // Create an arrayList of an object TrackDetail
         ArrayList<TrackDetail> artistDetail = new ArrayList<>();
@@ -42,6 +36,8 @@ public class ArtistActivity extends Activity {
         artistDetail.add(new TrackDetail("Zyan Feat. Sia", R.drawable.zyan_artist));
 
         ListView listView = findViewById(R.id.songs_list);
+        // Attach a header to ListView
+        listView.addHeaderView(header);
         TrackAdapter trackAdapter = new TrackAdapter(this, artistDetail, IDENTIFIER);
         listView.setAdapter(trackAdapter);
     }
