@@ -1,7 +1,10 @@
 package com.example.android.undhymn;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -31,6 +34,15 @@ public class SongsActivity extends AppCompatActivity {
 
         TrackAdapter trackAdapter = new TrackAdapter(this, trackDetails);
         listView.setAdapter(trackAdapter);
+
+        // Attach listener on list item view to play a song when clicked on
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(SongsActivity.this, PlaylistActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
