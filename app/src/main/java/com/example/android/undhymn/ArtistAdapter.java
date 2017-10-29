@@ -21,8 +21,9 @@ public class ArtistAdapter extends ArrayAdapter<TrackDetail> {
     /* Context of App */
     private Context mContext;
 
-    public ArtistAdapter(@NonNull Context context, @NonNull List<TrackDetail> objects) {
-        super(context, 0, objects);
+    public ArtistAdapter(@NonNull Context context, @NonNull List<TrackDetail> artistDetail) {
+        super(context, 0, artistDetail);
+        mContext = context;
     }
 
     @NonNull
