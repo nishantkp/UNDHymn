@@ -11,13 +11,15 @@ import java.util.ArrayList;
 
 public class SongsActivity extends AppCompatActivity {
 
+    private ArrayList<TrackDetail> trackDetails;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_songs);
 
         // Create an arrayList of an object TrackDetail
-        ArrayList<TrackDetail> trackDetails = new ArrayList<>();
+        trackDetails = new ArrayList<>();
         // Add details about songs in ArrayList
         trackDetails.add(new TrackDetail("My Passion", "Akcent", R.drawable.album_placeholder));
         trackDetails.add(new TrackDetail("The Nights", "Avicii", R.drawable.album_placeholder));
@@ -38,8 +40,24 @@ public class SongsActivity extends AppCompatActivity {
         // Attach listener on list item view to play a song when clicked on
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(SongsActivity.this, PlaylistActivity.class);
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                // Create a new Intent to {@link PlayingSongActivity}
+                Intent intent = new Intent(SongsActivity.this, PlayingSongActivity.class);
+
+                // Get the detail of song at which user has clicked
+                TrackDetail track = trackDetails.get(position);
+
+                /**
+                 * Create a Bundle and put all the track related data
+                 * into Bundle in (key, value) pair */
+                Bundle bundle = new Bundle();
+                bundle.putString("song_name", track.getSongName());
+                bundle.putString("artist_name", track.getArtistName());
+                bundle.putInt("album_cover", track.getAlbumArt());
+
+                // Send bundle through Intent
+                intent.putExtras(bundle);
+                // Start activity
                 startActivity(intent);
             }
         });
