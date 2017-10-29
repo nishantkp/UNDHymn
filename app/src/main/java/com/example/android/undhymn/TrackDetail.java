@@ -19,6 +19,9 @@ public class TrackDetail {
     /* Album art for the song */
     private int mAlbumArt;
 
+    /* Artist photo */
+    private int mAristPhoto;
+
     /***
      *  Public constructor for detail of songs
      * @param songName name of song
@@ -32,7 +35,7 @@ public class TrackDetail {
     }
 
     /***
-     *  Public constructor for detail of songs
+     *  Public constructor for detail of album
      * @param albumName name of the album
      * @param songName name of song
      * @param artistName name of artist
@@ -43,6 +46,15 @@ public class TrackDetail {
         mSongName = songName;
         mArtistName = artistName;
         mAlbumArt = albumArt;
+    }
+    /***
+     *  Public constructor for detail of artist
+     * @param artistName name of artist
+     * @param artistPhoto drawable resource id for photo of the artist
+     */
+    public TrackDetail(String artistName, int artistPhoto){
+        mArtistName = artistName;
+        mAristPhoto = artistPhoto;
     }
 
     /**
@@ -70,10 +82,18 @@ public class TrackDetail {
     }
 
     /**
-     * This method is called to get resource is for drawable album art
+     * This method is called to get resource id for drawable album art
      * @return resource id of drawable album art
      */
     public  int getAlbumArt(){
         return mAlbumArt;
+    }
+
+    /**
+     * This method is called to get resource id for artist photo
+     * @return resource id for photo of the artist
+     */
+    public  int getArtistPhoto(){
+        return mAristPhoto;
     }
 }
