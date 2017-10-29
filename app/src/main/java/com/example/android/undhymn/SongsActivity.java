@@ -21,16 +21,16 @@ public class SongsActivity extends AppCompatActivity {
         // Create an arrayList of an object TrackDetail
         trackDetails = new ArrayList<>();
         // Add details about songs in ArrayList
-        trackDetails.add(new TrackDetail("My Passion", "Akcent", R.drawable.album_placeholder));
-        trackDetails.add(new TrackDetail("The Nights", "Avicii", R.drawable.album_placeholder));
-        trackDetails.add(new TrackDetail("Hooked Ona Feeling", "Blue Swede", R.drawable.album_placeholder));
-        trackDetails.add(new TrackDetail("Should I Stay Or Should I Go", "The Clash", R.drawable.album_placeholder));
-        trackDetails.add(new TrackDetail("Sweet Disaster", "Dreamer", R.drawable.album_placeholder));
-        trackDetails.add(new TrackDetail("Not Afraid", "Eminem", R.drawable.album_placeholder));
-        trackDetails.add(new TrackDetail("Hall Of Fame", "The Script", R.drawable.album_placeholder));
-        trackDetails.add(new TrackDetail("Photograph", "Ed Sheeran", R.drawable.album_placeholder));
-        trackDetails.add(new TrackDetail("Alone", "Marshmello", R.drawable.album_placeholder));
-        trackDetails.add(new TrackDetail("Dusk Till Dawn", "Zyan Feat. Sia", R.drawable.album_placeholder));
+        trackDetails.add(new TrackDetail("My Passion", "Akcent", R.drawable.akcent_my_passion));
+        trackDetails.add(new TrackDetail("The Nights", "Avicii", R.drawable.avicii_nights_artwork));
+        trackDetails.add(new TrackDetail("Hooked Ona Feeling", "Blue Swede", R.drawable.hooked_on_a_feeling));
+        trackDetails.add(new TrackDetail("Should I Stay Or Should I Go", "The Clash", R.drawable.the_clash_should_i_stay_or_should_i_go));
+        trackDetails.add(new TrackDetail("Sweet Disaster", "Dreamer", R.drawable.sweet_disaster));
+        trackDetails.add(new TrackDetail("Not Afraid", "Eminem", R.drawable.eminem_not_afraid));
+        trackDetails.add(new TrackDetail("Hall Of Fame", "The Script", R.drawable.hall_of_fame));
+        trackDetails.add(new TrackDetail("Photograph", "Ed Sheeran", R.drawable.ed_sheeran_photograph));
+        trackDetails.add(new TrackDetail("Alone", "Marshmello", R.drawable.alone));
+        trackDetails.add(new TrackDetail("Dusk Till Dawn", "Zyan Feat. Sia", R.drawable.dusk_till_dawn_zayn_malik));
 
         ListView listView = findViewById(R.id.songs_list);
 
