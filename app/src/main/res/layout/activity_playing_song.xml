@@ -3,15 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="16dp">
+    android:paddingTop="8dp">
 
     <Button
         android:id="@+id/back_to_song_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:background="@null"
         android:drawableLeft="@drawable/ic_keyboard_arrow_left_black_48dp"
         android:drawableTint="@color/colorAccent"
