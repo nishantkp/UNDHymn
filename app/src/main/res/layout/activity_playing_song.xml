@@ -39,7 +39,7 @@
         android:layout_gravity="center"
         android:text="Song"
         android:textColor="@color/primaryTextColor"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
@@ -49,17 +49,16 @@
         android:layout_gravity="center"
         android:text="Artist"
         android:textColor="@color/colorAccent"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textSize="20sp" />
 
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="26dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="36sp" />
+        android:layout_marginTop="26dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
