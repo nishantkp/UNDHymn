@@ -42,5 +42,20 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Find textView with id main_album_activity_link
+        TextView albumTextView = findViewById(R.id.main_album_activity_link);
+        // Attach a listener to  textView to listen to any touch event
+        albumTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /**
+                 * When user clicks the Playlist, then start a new intent to navigate
+                 * to {@link AlbumActivity}
+                 */
+                Intent intent = new Intent(MainActivity.this, AlbumActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
