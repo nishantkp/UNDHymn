@@ -13,7 +13,10 @@ public class TrackDetail {
     /* Artist of the song */
     private String mArtistName;
 
-    /* Album art for the song*/
+    /* Name of Album */
+    private String mAlbumName;
+
+    /* Album art for the song */
     private int mAlbumArt;
 
     /***
@@ -26,6 +29,28 @@ public class TrackDetail {
         mSongName = songName;
         mArtistName = artistName;
         mAlbumArt = albumArt;
+    }
+
+    /***
+     *  Public constructor for detail of songs
+     * @param albumName name of the album
+     * @param songName name of song
+     * @param artistName name of artist
+     * @param albumArt drawable resource id for album art
+     */
+    public TrackDetail(String albumName,String songName, String artistName, int albumArt){
+        mAlbumName = albumName;
+        mSongName = songName;
+        mArtistName = artistName;
+        mAlbumArt = albumArt;
+    }
+
+    /**
+     * This method is called to get name of the album
+     * @return name of the album
+     */
+    public String getAlbumName(){
+        return mAlbumName;
     }
 
     /**
