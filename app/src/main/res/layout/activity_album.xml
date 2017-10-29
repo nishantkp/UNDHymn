@@ -4,14 +4,36 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="Album"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="32sp"
-        android:textStyle="bold" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="16dp"
+            android:text="Album"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableRight="@drawable/ic_shuffle_black_36dp"
+            android:drawableTint="@color/colorAccent"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="16dp"
+            android:text="shuffle"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
+    </LinearLayout>
 
     <GridView
         android:id="@+id/grid_view_album"
