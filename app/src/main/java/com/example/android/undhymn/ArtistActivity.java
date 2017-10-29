@@ -2,7 +2,10 @@ package com.example.android.undhymn;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -14,7 +17,15 @@ public class ArtistActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_artist);
+        setContentView(R.layout.activity_songs);
+
+        // Find the id page_title from activity_songs.xml and set text
+        TextView pageTitle = findViewById(R.id.page_title);
+        pageTitle.setText("Artist");
+
+        // Find the shuffle button from activity_song.xml and set visibility to GONE
+        Button shuffleButton = findViewById(R.id.shuffle_button);
+        shuffleButton.setVisibility(View.GONE);
 
         // Create an arrayList of an object TrackDetail
         ArrayList<TrackDetail> artistDetail = new ArrayList<>();
@@ -30,7 +41,7 @@ public class ArtistActivity extends Activity {
         artistDetail.add(new TrackDetail("Marshmello", R.drawable.marshmellow_dj));
         artistDetail.add(new TrackDetail("Zyan Feat. Sia", R.drawable.zyan_artist));
 
-        ListView listView = findViewById(R.id.artist_list);
+        ListView listView = findViewById(R.id.songs_list);
         TrackAdapter trackAdapter = new TrackAdapter(this, artistDetail, IDENTIFIER);
         listView.setAdapter(trackAdapter);
     }
