@@ -3,6 +3,8 @@ package com.example.android.undhymn;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -34,5 +36,22 @@ public class PlayingSongActivity extends AppCompatActivity {
         // for that song
         TextView artistNameTextView = findViewById(R.id.playing_song_artist_name);
         artistNameTextView.setText(artistName);
+
+        /** Find a TextView with ID back_to_song_list in order to going back to list of
+         * when user clicks on the button
+         */
+        Button backToSongList = findViewById(R.id.back_to_song_list);
+        // Attach a listener to button
+        backToSongList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /**
+                 * Start a new intent to go to {@link SongsActivity}
+                 * */
+                Intent intent = new Intent(PlayingSongActivity.this, SongsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
 }

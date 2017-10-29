@@ -63,4 +63,15 @@ public class SongsActivity extends AppCompatActivity {
         });
 
     }
+
+    /***
+     * Implement functionality of starting a new intent for going back to
+     * {@link MainActivity} when user clicks the back button in action bar
+     */
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(SongsActivity.this, MainActivity.class);
+        startActivity(intent);
+        super.onBackPressed();
+    }
 }

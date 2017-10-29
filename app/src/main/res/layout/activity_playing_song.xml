@@ -5,6 +5,24 @@
     android:orientation="vertical"
     android:paddingTop="16dp">
 
+    <Button
+        android:id="@+id/back_to_song_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@null"
+        android:drawableLeft="@drawable/ic_keyboard_arrow_left_black_48dp"
+        android:drawableTint="@color/colorAccent"
+        android:fontFamily="sans-serif-medium"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="Songs"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp" />
+
     <ImageView
         android:id="@+id/playing_song_album_cover"
         android:layout_width="250dp"
