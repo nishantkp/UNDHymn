@@ -81,4 +81,34 @@
     <!-- Details for song  10 -->
     <string name="song_10_name" translatable="false">Dusk Till Dawn</string>
     <string name="song_10_artist" translatable="false">Zyan Feat. Sia</string>
+
+    <!-- Main activity purpose text view -->
+    <string name="main_activity_purpose_text" translatable="false">Home screen which lists
+        all the important links.
+        \nUser can navigate to any activity through links provided above.</string>
+
+    <!-- Songs activity purpose text view -->
+    <string name="songs_activity_purpose_text" translatable="false">Songs activity lists all the
+        songs available in the music library. \nWhen user clicks on song, It will directly go to
+        now playing activity to play a song which is clicked on. User can press shuffle
+        to play random song.</string>
+
+    <!-- Playlist activity purpose text view -->
+    <string name="playlist_activity_purpose_text" translatable="false">User can create a new
+        playlist by clicking on New Playlist button.</string>
+
+    <!-- Album activity purpose text view -->
+    <string name="album_activity_purpose_text" translatable="false"> List of all the available
+        albums in music library, displays in grid view with album art
+        , album name and artist name. User can press shuffle to play random album.</string>
+
+    <!-- Artist activity purpose text view -->
+    <string name="artist_activity_purpose_text" translatable="false"> Lists all the available
+        artists from the songs which are available in music library. When user clicks
+        on artist, it will show all the songs from that artist available in music library.</string>
+
+    <!-- Playing song activity purpose text view -->
+    <string name="playing_song_activity_purpose_text" translatable="false"> This activity shows up
+        when user plays a certain song. User can start and pause the song. Play previous
+        or Next song.</string>
 </resources>
