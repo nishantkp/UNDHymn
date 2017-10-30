@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@android:color/white"
@@ -11,7 +12,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/album_placeholder" />
+        tools:src="@drawable/album_placeholder" />
 
     <TextView
         android:id="@+id/grid_item_album_name"
@@ -22,9 +23,9 @@
         android:maxLength="20"
         android:maxLines="1"
         android:paddingTop="4dp"
-        android:text="The nights"
         android:textColor="@color/primaryTextColor"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        tools:text="The nights" />
 
     <TextView
         android:id="@+id/grid_item_artist_name"
@@ -33,7 +34,7 @@
         android:ellipsize="end"
         android:gravity="center"
         android:maxLines="1"
-        android:text="Avicii"
         android:textColor="@color/secondaryTextColor"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        tools:text="Avicii" />
 </LinearLayout>

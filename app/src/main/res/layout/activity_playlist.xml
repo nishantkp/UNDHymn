@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:padding="16dp"
-        android:text="Playlist"
+        android:text="@string/playlist_activity_header_text"
         android:textColor="@color/primaryTextColor"
         android:textSize="32sp"
         android:textStyle="bold" />
@@ -29,7 +29,7 @@
             android:fontFamily="sans-serif-medium"
             android:paddingBottom="16dp"
             android:paddingTop="16dp"
-            android:text="Missing playlist?"
+            android:text="@string/playlist_activity_missing_playlist"
             android:textColor="@color/primaryTextColor"
             android:textSize="20sp" />
 
@@ -42,7 +42,7 @@
             android:paddingLeft="42dp"
             android:paddingRight="42dp"
             android:paddingTop="8dp"
-            android:text="New playlist"
+            android:text="@string/playlist_activity_new_playlist"
             android:textColor="@android:color/white"
             android:textSize="20sp" />
     </LinearLayout>

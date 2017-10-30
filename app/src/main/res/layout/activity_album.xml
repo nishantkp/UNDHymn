@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="16dp"
-            android:text="Album"
+            android:text="@string/album_activity_header_title"
             android:textColor="@color/primaryTextColor"
             android:textSize="32sp"
             android:textStyle="bold" />
@@ -32,7 +32,7 @@
             android:minHeight="0dp"
             android:minWidth="0dp"
             android:padding="8dp"
-            android:text="shuffle"
+            android:text="@string/header_shuffle_button_text"
             android:textAllCaps="false"
             android:textColor="@color/colorAccent"
             android:textSize="16sp" />

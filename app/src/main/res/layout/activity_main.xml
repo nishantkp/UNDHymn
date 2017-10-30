@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
             android:padding="16dp"
-            android:text="Songs"
+            android:text="@string/main_activity_songs_link"
             android:textColor="@color/colorAccent"
             android:textSize="20sp" />
 
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
             android:padding="16dp"
-            android:text="Playlist"
+            android:text="@string/main_activity_playlist_link"
             android:textColor="@color/colorAccent"
             android:textSize="20sp" />
 
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
             android:padding="16dp"
-            android:text="Album"
+            android:text="@string/main_activity_album_link"
             android:textColor="@color/colorAccent"
             android:textSize="20sp" />
 
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
             android:padding="16dp"
-            android:text="Artist"
+            android:text="@string/main_activity_artist_link"
             android:textColor="@color/colorAccent"
             android:textSize="20sp" />
 

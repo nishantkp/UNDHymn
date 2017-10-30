@@ -1,3 +1,84 @@
 <resources>
-    <string name="app_name">Hymn</string>
+    <string name="app_name" translatable="false">Hymn</string>
+    
+    <!-- Album activity header text -->
+    <string name="album_activity_header_title" translatable="false">Album</string>
+    
+    <!-- Shuffle button text in header -->
+    <string name="header_shuffle_button_text" translatable="false">shuffle</string>
+
+    <!-- Artist activity header text -->
+    <string name="artist_activity_header_text" translatable="false">Artist</string>
+
+    <!-- Songs activity header text -->
+    <string name="songs_activity_header_title" translatable="false">Songs</string>
+
+    <!-- Main activity Songs link text -->
+    <string name="main_activity_songs_link" translatable="false">Songs</string>
+
+    <!-- Main activity Playlist link text -->
+    <string name="main_activity_playlist_link" translatable="false">Playlist</string>
+
+    <!-- Main activity Album link text -->
+    <string name="main_activity_album_link" translatable="false">Album</string>
+
+    <!-- Main activity Artist link text -->
+    <string name="main_activity_artist_link" translatable="false">Artist</string>
+
+    <!-- Playlist activity header text -->
+    <string name="playlist_activity_header_text" translatable="false">Playlist</string>
+
+    <!-- Playlist activity missing playlist text -->
+    <string name="playlist_activity_missing_playlist" translatable="false">Missing playlist?</string>
+
+    <!-- Playlist activity new playlist text -->
+    <string name="playlist_activity_new_playlist" translatable="false">New Playlist</string>
+
+    <!-- Details for song  1 -->
+    <string name="song_1_name" translatable="false">My Passion</string>
+    <string name="song_1_album" translatable="false">My Passion</string>
+    <string name="song_1_artist" translatable="false">Akcent</string>
+
+    <!-- Details for song  2 -->
+    <string name="song_2_name" translatable="false">The Nights</string>
+    <string name="song_2_album" translatable="false">Stories</string>
+    <string name="song_2_artist" translatable="false">Avicii</string>
+
+    <!-- Details for song  3 -->
+    <string name="song_3_name" translatable="false">Hooked On a Feeling</string>
+    <string name="song_3_album" translatable="false">Blue Swede</string>
+    <string name="song_3_artist" translatable="false">Blue Swede</string>
+
+    <!-- Details for song  4 -->
+    <string name="song_4_name" translatable="false">Should I Stay Or Should I Go</string>
+    <string name="song_4_album" translatable="false">Combat Rock</string>
+    <string name="song_4_artist" translatable="false">The Clash</string>
+
+    <!-- Details for song  5 -->
+    <string name="song_5_name" translatable="false">Sweet Disaster</string>
+    <string name="song_5_album" translatable="false">This Album Does Not Exist</string>
+    <string name="song_5_artist" translatable="false">Dreamer</string>
+
+    <!-- Details for song  6 -->
+    <string name="song_6_name" translatable="false">Not Afraid</string>
+    <string name="song_6_album" translatable="false">Recovery</string>
+    <string name="song_6_artist" translatable="false">Eminem</string>
+
+    <!-- Details for song  7 -->
+    <string name="song_7_name" translatable="false">Hall Of Fame</string>
+    <string name="song_7_album" translatable="false">3</string>
+    <string name="song_7_artist" translatable="false">The Script</string>
+
+    <!-- Details for song  8 -->
+    <string name="song_8_name" translatable="false">Photograph</string>
+    <string name="song_8_album" translatable="false">x</string>
+    <string name="song_8_artist" translatable="false">Ed Sheeran</string>
+
+    <!-- Details for song  9 -->
+    <string name="song_9_name" translatable="false">Alone</string>
+    <string name="song_9_artist" translatable="false">Marshmello</string>
+
+    <!-- Details for song  10 -->
+    <string name="song_10_name" translatable="false">Dusk Till Dawn</string>
+    <string name="song_10_artist" translatable="false">Zyan Feat. Sia</string>
 </resources>

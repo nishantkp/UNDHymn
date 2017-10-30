@@ -37,15 +37,15 @@ public class GridAlbumAdapter extends ArrayAdapter<TrackDetail> {
         TrackDetail currentItem = getItem(position);
 
         // Find the imageView for album art in album_grid_item.xml and set the album art
-        ImageView albumArt = (ImageView) gridItemView.findViewById(R.id.grid_item_album_cover);
+        ImageView albumArt = gridItemView.findViewById(R.id.grid_item_album_cover);
         albumArt.setImageResource(currentItem.getAlbumArt());
 
         // Find the textView for album name in album_grid_item.xml and set the album name
-        TextView albumName = (TextView) gridItemView.findViewById(R.id.grid_item_album_name);
+        TextView albumName = gridItemView.findViewById(R.id.grid_item_album_name);
         albumName.setText(currentItem.getAlbumName().toString());
 
         // Find the textView for album artist in album_grid_item.xml and set artist name
-        TextView artistName = (TextView) gridItemView.findViewById(R.id.grid_item_artist_name);
+        TextView artistName = gridItemView.findViewById(R.id.grid_item_artist_name);
         artistName.setText(currentItem.getArtistName().toString());
 
         return gridItemView;

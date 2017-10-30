@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="16dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/album_placeholder" />
+        tools:src="@drawable/album_placeholder" />
 
     <TextView
         android:id="@+id/playing_song_name"

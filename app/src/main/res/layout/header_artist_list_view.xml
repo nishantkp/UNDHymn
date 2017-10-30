@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:padding="16dp"
-        android:text="Artist"
+        android:text="@string/artist_activity_header_text"
         android:textColor="@color/primaryTextColor"
         android:textSize="32sp"
         android:textStyle="bold" />

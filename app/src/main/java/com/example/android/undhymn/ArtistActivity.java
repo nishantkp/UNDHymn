@@ -24,16 +24,27 @@ public class ArtistActivity extends AppCompatActivity {
         // Create an arrayList of an object TrackDetail
         ArrayList<TrackDetail> artistDetail = new ArrayList<>();
         // Add details about artist in ArrayList
-        artistDetail.add(new TrackDetail("Akcent", R.drawable.akcent_artist));
-        artistDetail.add(new TrackDetail("Avicii", R.drawable.avicii_artist));
-        artistDetail.add(new TrackDetail("Blue Swede", R.drawable.blue_swede_artist));
-        artistDetail.add(new TrackDetail("The Clash", R.drawable.the_clash_artist));
-        artistDetail.add(new TrackDetail("Dreamer", R.drawable.artist_placeholder));
-        artistDetail.add(new TrackDetail("Eminem", R.drawable.eminem_not_afraid));
-        artistDetail.add(new TrackDetail("The Script", R.drawable.the_script_artist));
-        artistDetail.add(new TrackDetail("Ed Sheeran", R.drawable.ed_sheeran_artist));
-        artistDetail.add(new TrackDetail("Marshmello", R.drawable.marshmellow_dj));
-        artistDetail.add(new TrackDetail("Zyan Feat. Sia", R.drawable.zyan_artist));
+        artistDetail.add(new TrackDetail(getString(R.string.song_1_artist)
+                , R.drawable.akcent_artist));
+        artistDetail.add(new TrackDetail(getString(R.string.song_2_artist)
+                , R.drawable.avicii_artist));
+        artistDetail.add(new TrackDetail(getString(R.string.song_3_artist)
+                , R.drawable.blue_swede_artist));
+        artistDetail.add(new TrackDetail(getString(R.string.song_4_artist)
+                , R.drawable.the_clash_artist));
+        artistDetail.add(new TrackDetail(getString(R.string.song_5_artist)
+                , R.drawable.artist_placeholder));
+        artistDetail.add(new TrackDetail(getString(R.string.song_6_artist
+        )
+                , R.drawable.eminem_not_afraid));
+        artistDetail.add(new TrackDetail(getString(R.string.song_7_artist)
+                , R.drawable.the_script_artist));
+        artistDetail.add(new TrackDetail(getString(R.string.song_8_artist)
+                , R.drawable.ed_sheeran_artist));
+        artistDetail.add(new TrackDetail(getString(R.string.song_9_artist)
+                , R.drawable.marshmellow_dj));
+        artistDetail.add(new TrackDetail(getString(R.string.song_10_artist)
+                , R.drawable.zyan_artist));
 
         ListView listView = findViewById(R.id.songs_list);
         // Attach a header to ListView

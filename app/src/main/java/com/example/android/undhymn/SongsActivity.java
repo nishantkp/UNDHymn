@@ -27,16 +27,36 @@ public class SongsActivity extends AppCompatActivity {
         // Create an arrayList of an object TrackDetail
         trackDetails = new ArrayList<>();
         // Add details about songs in ArrayList
-        trackDetails.add(new TrackDetail("My Passion", "Akcent", R.drawable.akcent_my_passion));
-        trackDetails.add(new TrackDetail("The Nights", "Avicii", R.drawable.avicii_nights_artwork));
-        trackDetails.add(new TrackDetail("Hooked Ona Feeling", "Blue Swede", R.drawable.hooked_on_a_feeling));
-        trackDetails.add(new TrackDetail("Should I Stay Or Should I Go", "The Clash", R.drawable.the_clash_should_i_stay_or_should_i_go));
-        trackDetails.add(new TrackDetail("Sweet Disaster", "Dreamer", R.drawable.sweet_disaster));
-        trackDetails.add(new TrackDetail("Not Afraid", "Eminem", R.drawable.eminem_not_afraid));
-        trackDetails.add(new TrackDetail("Hall Of Fame", "The Script", R.drawable.hall_of_fame));
-        trackDetails.add(new TrackDetail("Photograph", "Ed Sheeran", R.drawable.ed_sheeran_photograph));
-        trackDetails.add(new TrackDetail("Alone", "Marshmello", R.drawable.alone));
-        trackDetails.add(new TrackDetail("Dusk Till Dawn", "Zyan Feat. Sia", R.drawable.dusk_till_dawn_zayn_malik));
+        trackDetails.add(new TrackDetail(getString(R.string.song_1_name)
+                , getString(R.string.song_1_artist)
+                , R.drawable.akcent_my_passion));
+        trackDetails.add(new TrackDetail(getString(R.string.song_2_name)
+                , getString(R.string.song_2_artist)
+                , R.drawable.avicii_nights_artwork));
+        trackDetails.add(new TrackDetail(getString(R.string.song_3_name)
+                , getString(R.string.song_3_artist)
+                , R.drawable.hooked_on_a_feeling));
+        trackDetails.add(new TrackDetail(getString(R.string.song_4_name)
+                , getString(R.string.song_4_artist)
+                , R.drawable.the_clash_should_i_stay_or_should_i_go));
+        trackDetails.add(new TrackDetail(getString(R.string.song_5_name)
+                , getString(R.string.song_5_artist)
+                , R.drawable.sweet_disaster));
+        trackDetails.add(new TrackDetail(getString(R.string.song_6_name)
+                , getString(R.string.song_6_artist)
+                , R.drawable.eminem_not_afraid));
+        trackDetails.add(new TrackDetail(getString(R.string.song_7_name)
+                , getString(R.string.song_7_artist)
+                , R.drawable.hall_of_fame));
+        trackDetails.add(new TrackDetail(getString(R.string.song_8_name)
+                , getString(R.string.song_8_artist)
+                , R.drawable.ed_sheeran_photograph));
+        trackDetails.add(new TrackDetail(getString(R.string.song_9_name)
+                , getString(R.string.song_9_artist)
+                , R.drawable.alone));
+        trackDetails.add(new TrackDetail(getString(R.string.song_10_name)
+                , getString(R.string.song_10_artist)
+                , R.drawable.dusk_till_dawn_zayn_malik));
 
         ListView listView = findViewById(R.id.songs_list);
         // Attach a header to ListView
@@ -56,7 +76,8 @@ public class SongsActivity extends AppCompatActivity {
 
                 /**
                  * Create a Bundle and put all the track related data
-                 * into Bundle in (key, value) pair */
+                 * into Bundle in (key, value) pair
+                 * */
                 Bundle bundle = new Bundle();
                 bundle.putString("song_name", track.getSongName());
                 bundle.putString("artist_name", track.getArtistName());
