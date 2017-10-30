@@ -11,8 +11,8 @@ import java.util.ArrayList;
 
 public class SongsActivity extends AppCompatActivity {
 
-    private ArrayList<TrackDetail> trackDetails;
     private static final int IDENTIFIER = 1;
+    private ArrayList<TrackDetail> trackDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +72,7 @@ public class SongsActivity extends AppCompatActivity {
                 Intent intent = new Intent(SongsActivity.this, PlayingSongActivity.class);
 
                 // Get the detail of song at which user has clicked
-                TrackDetail track = trackDetails.get(position);
+                TrackDetail track = trackDetails.get(position - 1);
 
                 /**
                  * Create a Bundle and put all the track related data
