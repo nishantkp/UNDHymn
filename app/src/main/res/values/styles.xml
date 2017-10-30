@@ -216,4 +216,18 @@
         <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textSize">16sp</item>
     </style>
+
+    <style name="playing_song_activity_library_button">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:background">@drawable/add_new_background</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>
