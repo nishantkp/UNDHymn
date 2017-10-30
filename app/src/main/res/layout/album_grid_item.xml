@@ -9,32 +9,16 @@
 
     <ImageView
         android:id="@+id/grid_item_album_cover"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="centerCrop"
+        style="@style/grid_list_item_album_cover"
         tools:src="@drawable/album_placeholder" />
 
     <TextView
         android:id="@+id/grid_item_album_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:gravity="center"
-        android:maxLength="20"
-        android:maxLines="1"
-        android:paddingTop="4dp"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="14sp"
+        style="@style/grid_list_item_album_name"
         tools:text="The nights" />
 
     <TextView
         android:id="@+id/grid_item_artist_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:gravity="center"
-        android:maxLines="1"
-        android:textColor="@color/secondaryTextColor"
-        android:textSize="14sp"
+        style="@style/grid_list_item_artist_name"
         tools:text="Avicii" />
 </LinearLayout>

@@ -12,38 +12,15 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="16dp"
-            android:text="@string/songs_activity_header_title"
-            android:textColor="@color/primaryTextColor"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+            style="@style/activity_title_text_style"
+            android:text="@string/songs_activity_header_title" />
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@null"
-            android:drawableRight="@drawable/ic_shuffle_black_36dp"
-            android:drawableTint="@color/colorAccent"
-            android:fontFamily="sans-serif-medium"
-            android:minHeight="0dp"
-            android:minWidth="0dp"
-            android:padding="8dp"
-            android:text="@string/header_shuffle_button_text"
-            android:textAllCaps="false"
-            android:textColor="@color/colorAccent"
-            android:textSize="16sp" />
+            style="@style/shuffle_button_style"
+            android:text="@string/header_shuffle_button_text" />
     </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:padding="16dp"
-        android:text="@string/songs_activity_purpose_text"
-        android:textColor="@color/secondaryTextColor"
-        android:textSize="16sp" />
+        style="@style/purpose_text_style"
+        android:text="@string/songs_activity_purpose_text" />
 </LinearLayout>

@@ -6,14 +6,8 @@
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:padding="16dp"
-        android:text="@string/playlist_activity_header_text"
-        android:textColor="@color/primaryTextColor"
-        android:textSize="32sp"
-        android:textStyle="bold" />
+        style="@style/home_screen_title_text_style"
+        android:text="@string/playlist_activity_header_text" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -24,35 +18,15 @@
         android:padding="16dp">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:paddingBottom="16dp"
-            android:paddingTop="16dp"
-            android:text="@string/playlist_activity_missing_playlist"
-            android:textColor="@color/primaryTextColor"
-            android:textSize="20sp" />
+            style="@style/playlist_activity_missing_playlist_text_style"
+            android:text="@string/playlist_activity_missing_playlist" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/add_new_background"
-            android:fontFamily="sans-serif-medium"
-            android:paddingBottom="8dp"
-            android:paddingLeft="42dp"
-            android:paddingRight="42dp"
-            android:paddingTop="8dp"
-            android:text="@string/playlist_activity_new_playlist"
-            android:textColor="@android:color/white"
-            android:textSize="20sp" />
+            style="@style/playlist_activity_new_playlist_button_style"
+            android:text="@string/playlist_activity_new_playlist" />
     </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:padding="16dp"
-        android:text="@string/playlist_activity_purpose_text"
-        android:textColor="@color/secondaryTextColor"
-        android:textSize="16sp" />
+        style="@style/purpose_text_style"
+        android:text="@string/playlist_activity_purpose_text" />
 </LinearLayout>

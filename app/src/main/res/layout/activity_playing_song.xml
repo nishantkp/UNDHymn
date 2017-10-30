@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white" >
+    android:background="@android:color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,40 +13,20 @@
 
         <ImageView
             android:id="@+id/playing_song_album_cover"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="16dp"
-            android:scaleType="centerCrop"
+            style="@style/playing_song_album_cover_style"
             tools:src="@drawable/album_placeholder" />
 
         <TextView
             android:id="@+id/playing_song_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            style="@style/playing_song_name_style"
             tools:text="Song" />
 
         <TextView
             android:id="@+id/playing_song_artist_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textColor="@color/secondaryTextColor"
-            android:textSize="20sp"
+            style="@style/playing_song_artist_name_style"
             tools:text="Artist" />
 
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="26dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="26dp" />
+        <SeekBar style="@style/playing_song_seek_bar_style" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,39 +35,21 @@
             android:orientation="horizontal">
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:drawableLeft="@drawable/ic_skip_previous_black_48dp"
-                android:minHeight="0dp"
-                android:minWidth="0dp" />
+                style="@style/playing_song_button_style"
+                android:drawableLeft="@drawable/ic_skip_previous_black_48dp" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="36dp"
-                android:background="@null"
-                android:drawableLeft="@drawable/ic_play_arrow_black_48dp"
-                android:minHeight="0dp"
-                android:minWidth="0dp" />
+                style="@style/playing_song_button_style"
+                android:layout_margin="26dp"
+                android:drawableLeft="@drawable/ic_play_arrow_black_48dp" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:drawableLeft="@drawable/ic_skip_next_black_48dp"
-                android:minHeight="0dp"
-                android:minWidth="0dp" />
-
+                style="@style/playing_song_button_style"
+                android:drawableLeft="@drawable/ic_skip_next_black_48dp" />
         </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:padding="16dp"
-            android:text="@string/playing_song_activity_purpose_text"
-            android:textColor="@color/secondaryTextColor"
-            android:textSize="16sp" />
+            style="@style/purpose_text_style"
+            android:text="@string/playing_song_activity_purpose_text" />
     </LinearLayout>
 </ScrollView>

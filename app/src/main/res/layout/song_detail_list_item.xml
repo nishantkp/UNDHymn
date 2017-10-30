@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/white"
     android:orientation="horizontal"
-    android:padding="8dp"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:padding="8dp">
 
     <ImageView
         android:id="@+id/song_list_item_track_album_art"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:scaleType="centerCrop"
+        style="@style/song_list_item_cover_style"
         tools:src="@drawable/album_placeholder" />
 
     <LinearLayout
@@ -24,25 +22,13 @@
 
         <TextView
             android:id="@+id/song_list_item_track_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:fontFamily="sans-serif-medium"
-            android:maxLines="1"
-            tools:text="Placeholder Song"
-            android:textColor="@color/primaryTextColor"
-            android:textSize="14sp" />
+            style="@style/song_list_item_song_name"
+            tools:text="Placeholder Song" />
 
         <TextView
             android:id="@+id/song_list_item_track_artist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:fontFamily="sans-serif-light"
-            android:maxLines="1"
-            tools:text="Placeholder Artist"
-            android:textColor="@color/secondaryTextColor"
-            android:textSize="14sp" />
+            style="@style/song_list_item_artist_name"
+            tools:text="Placeholder Artist" />
 
     </LinearLayout>
 </LinearLayout>

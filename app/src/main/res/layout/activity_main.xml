@@ -14,24 +14,13 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:padding="16dp"
-            android:text="Library"
-            android:textColor="@color/primaryTextColor"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+            style="@style/home_screen_title_text_style"
+            android:text="Library" />
 
         <TextView
             android:id="@+id/main_songs_activity_link"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:padding="16dp"
-            android:text="@string/main_activity_songs_link"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
+            style="@style/home_screen_category_link_style"
+            android:text="@string/main_activity_songs_link" />
 
         <View
             android:layout_width="match_parent"
@@ -40,13 +29,8 @@
 
         <TextView
             android:id="@+id/main_playlist_activity_link"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:padding="16dp"
-            android:text="@string/main_activity_playlist_link"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
+            style="@style/home_screen_category_link_style"
+            android:text="@string/main_activity_playlist_link" />
 
         <View
             android:layout_width="match_parent"
@@ -55,13 +39,8 @@
 
         <TextView
             android:id="@+id/main_album_activity_link"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:padding="16dp"
-            android:text="@string/main_activity_album_link"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
+            style="@style/home_screen_category_link_style"
+            android:text="@string/main_activity_album_link" />
 
         <View
             android:layout_width="match_parent"
@@ -70,13 +49,8 @@
 
         <TextView
             android:id="@+id/main_artist_activity_link"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:padding="16dp"
-            android:text="@string/main_activity_artist_link"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
+            style="@style/home_screen_category_link_style"
+            android:text="@string/main_activity_artist_link" />
 
         <View
             android:layout_width="match_parent"
@@ -84,13 +58,8 @@
             android:background="@color/dividerColor" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:padding="16dp"
-            android:text="@string/main_activity_purpose_text"
-            android:textColor="@color/secondaryTextColor"
-            android:textSize="16sp" />
+            style="@style/purpose_text_style"
+            android:text="@string/main_activity_purpose_text" />
     </LinearLayout>
 
 </ScrollView>
