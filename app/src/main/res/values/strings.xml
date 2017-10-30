@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name" translatable="false">Hymn</string>
+
+    <!-- Main activity header text -->
+    <string name="main_activity_header_title" translatable="true">Library</string>
+
+    <!-- Main activity header button text -->
+    <string name="main_activity_header_button_text" translatable="true">play</string>
     
     <!-- Album activity header text -->
     <string name="album_activity_header_title" translatable="false">Album</string>
@@ -85,7 +91,8 @@
     <!-- Main activity purpose text view -->
     <string name="main_activity_purpose_text" translatable="false">Home screen which lists
         all the important links.
-        \nUser can navigate to any activity through links provided above.</string>
+        \nUser can navigate to any activity through links provided above and play a song
+        by clicking play button directly.</string>
 
     <!-- Songs activity purpose text view -->
     <string name="songs_activity_purpose_text" translatable="false">Songs activity lists all the
@@ -95,7 +102,8 @@
 
     <!-- Playlist activity purpose text view -->
     <string name="playlist_activity_purpose_text" translatable="false">User can create a new
-        playlist by clicking on New Playlist button.</string>
+        playlist by clicking on New Playlist button. Press shuffle button to play a
+        random playlist.</string>
 
     <!-- Album activity purpose text view -->
     <string name="album_activity_purpose_text" translatable="false"> List of all the available
@@ -105,10 +113,11 @@
     <!-- Artist activity purpose text view -->
     <string name="artist_activity_purpose_text" translatable="false"> Lists all the available
         artists from the songs which are available in music library. When user clicks
-        on artist, it will show all the songs from that artist available in music library.</string>
+        on artist, it will show all the songs from that artist available in music library.
+        Play a random artist's song when user presses shuffle button.</string>
 
     <!-- Playing song activity purpose text view -->
     <string name="playing_song_activity_purpose_text" translatable="false"> This activity shows up
         when user plays a certain song. User can start and pause the song. Play previous
-        or Next song.</string>
+        or Next song. User can jump directly to library by pressing library button.</string>
 </resources>

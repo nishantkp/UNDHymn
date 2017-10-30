@@ -12,17 +12,18 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="@string/album_activity_header_title"
-            style="@style/activity_title_text_style" />
+            style="@style/activity_title_text_style"
+            android:text="@string/album_activity_header_title" />
 
         <Button
-            android:text="@string/header_shuffle_button_text"
-            style="@style/shuffle_button_style" />
+            android:id="@+id/album_activity_shuffle_button"
+            style="@style/shuffle_button_style"
+            android:text="@string/header_shuffle_button_text" />
     </LinearLayout>
 
     <TextView
-        android:text="@string/album_activity_purpose_text"
-        style="@style/purpose_text_style" />
+        style="@style/purpose_text_style"
+        android:text="@string/album_activity_purpose_text" />
 
     <GridView
         android:id="@+id/grid_view_album"

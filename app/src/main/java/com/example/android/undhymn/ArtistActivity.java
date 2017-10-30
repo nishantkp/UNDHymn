@@ -1,8 +1,10 @@
 package com.example.android.undhymn;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -20,6 +22,21 @@ public class ArtistActivity extends AppCompatActivity {
         // Set the action bar elevation to 0dp
         getSupportActionBar().setElevation(0);
         View header = View.inflate(this, R.layout.header_artist_list_view, null);
+
+        // Find the button with id artist_activity_header_shuffle_button in header_artist_list_view.xml
+        // Attach a listener to button
+        Button shuffleButton = header.findViewById(R.id.artist_activity_header_shuffle_button);
+        shuffleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /**
+                 * When user clicks on shuffle button start activity to {@link PlayingSongActivity}
+                 * in order to play songs by random artist
+                 */
+                Intent intent = new Intent(ArtistActivity.this, PlayingSongActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // Create an arrayList of an object TrackDetail
         ArrayList<TrackDetail> artistDetail = new ArrayList<>();
@@ -51,5 +68,17 @@ public class ArtistActivity extends AppCompatActivity {
         listView.addHeaderView(header);
         TrackAdapter trackAdapter = new TrackAdapter(this, artistDetail, IDENTIFIER);
         listView.setAdapter(trackAdapter);
+    }
+
+    /***
+     * Implement functionality of starting a new intent for going back to
+     * {@link MainActivity} when user clicks the back button in action bar
+     * in order to avoid looping problem
+     */
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(ArtistActivity.this, MainActivity.class);
+        startActivity(intent);
+        super.onBackPressed();
     }
 }

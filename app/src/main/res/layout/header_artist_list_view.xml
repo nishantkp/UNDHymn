@@ -12,9 +12,13 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/header_page_title"
-            style="@style/home_screen_title_text_style"
+            style="@style/activity_title_text_style"
             android:text="@string/artist_activity_header_text" />
+
+        <Button
+            android:id="@+id/artist_activity_header_shuffle_button"
+            style="@style/shuffle_button_style"
+            android:text="@string/header_shuffle_button_text" />
     </LinearLayout>
 
     <TextView

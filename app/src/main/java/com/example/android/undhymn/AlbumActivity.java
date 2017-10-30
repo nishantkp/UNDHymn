@@ -1,7 +1,10 @@
 package com.example.android.undhymn;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.GridView;
 
 import java.util.ArrayList;
@@ -12,6 +15,20 @@ public class AlbumActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_album);
+
+        // Find the button with id album_activity_shuffle_button and attach a listener to it
+        Button shuffleButton = findViewById(R.id.album_activity_shuffle_button);
+        shuffleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /**
+                 * When user clicks on shuffle button, start {@link PlayingSongActivity} to
+                 * play a random album
+                 */
+                Intent intent = new Intent(AlbumActivity.this, PlayingSongActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // Set the action bar elevation to 0dp
         getSupportActionBar().setElevation(0);
@@ -50,10 +67,20 @@ public class AlbumActivity extends AppCompatActivity {
         trackDetails.add(new TrackDetail(getString(R.string.song_8_album)
                 ,getString(R.string.song_8_name)
                 , getString(R.string.song_8_artist)
-                , R.drawable.sweet_disaster));
+                , R.drawable.ed_sheeran_photograph));
 
         GridView gridView = findViewById(R.id.grid_view_album);/**/
         GridAlbumAdapter gridAlbumAdapter = new GridAlbumAdapter(this, trackDetails);
         gridView.setAdapter(gridAlbumAdapter);
+    }
+
+    /**
+     * When user clicks on back button in action bar, start  {@link MainActivity}
+     * in order to prevent looping problem
+     */
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(AlbumActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 }

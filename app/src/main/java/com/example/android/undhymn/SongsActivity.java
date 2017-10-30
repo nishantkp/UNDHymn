@@ -5,13 +5,25 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
 public class SongsActivity extends AppCompatActivity {
 
+    /**
+     * Keys for bundle to send to {@link PlayingSongActivity} through Intent
+     */
+    public static final String SONG_NAME_KEY = "song_name";
+    public static final String ARTIST_NAME_KEY = "artist_name";
+    public static final String ALBUM_COVER_KEY = "album_cover";
+
+    /**
+     * Identifier for TrackAdapter to distinguish between ArrayList is for songs or for artists
+     */
     private static final int IDENTIFIER = 1;
+
     private ArrayList<TrackDetail> trackDetails;
 
     @Override
@@ -22,6 +34,21 @@ public class SongsActivity extends AppCompatActivity {
         // Set the action bar elevation to 0dp
         getSupportActionBar().setElevation(0);
         View header = View.inflate(this, R.layout.header_songs_list_view, null);
+
+        // Find the button with id song_activity_header_shuffle_button in header_songs_list_view.xml
+        // Attach a listener to button
+        Button shuffleButton = header.findViewById(R.id.song_activity_header_shuffle_button);
+        shuffleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /**
+                 * When user clicks on shuffle button start activity to {@link PlayingSongActivity}
+                 * in order to play a random song
+                 */
+                Intent intent = new Intent(SongsActivity.this, PlayingSongActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // Create an arrayList of an object TrackDetail
         trackDetails = new ArrayList<>();
@@ -76,11 +103,11 @@ public class SongsActivity extends AppCompatActivity {
                 /**
                  * Create a Bundle and put all the track related data
                  * into Bundle in (key, value) pair
-                 * */
+                 */
                 Bundle bundle = new Bundle();
-                bundle.putString("song_name", track.getSongName());
-                bundle.putString("artist_name", track.getArtistName());
-                bundle.putInt("album_cover", track.getAlbumArt());
+                bundle.putString(SONG_NAME_KEY, track.getSongName());
+                bundle.putString(ARTIST_NAME_KEY, track.getArtistName());
+                bundle.putInt(ALBUM_COVER_KEY, track.getAlbumArt());
 
                 // Send bundle through Intent
                 intent.putExtras(bundle);
@@ -91,7 +118,7 @@ public class SongsActivity extends AppCompatActivity {
 
     }
 
-    /***
+    /**
      * Implement functionality of starting a new intent for going back to
      * {@link MainActivity} when user clicks the back button in action bar
      */

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -72,6 +73,21 @@ public class MainActivity extends AppCompatActivity {
                  * to {@link ArtistActivity}
                  */
                 Intent intent = new Intent(MainActivity.this, ArtistActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // FInd the button with id play_button_main_activity
+        Button playSong = findViewById(R.id.play_button_main_activity);
+        // Attach a listener to button to listen for any touch event
+        playSong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /**
+                 * When user clicks the Play button, then start a new intent to navigate
+                 * to {@link PlayingSongActivity}
+                 */
+                Intent intent = new Intent(MainActivity.this, PlayingSongActivity.class);
                 startActivity(intent);
             }
         });
