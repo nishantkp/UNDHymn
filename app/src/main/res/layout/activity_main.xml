@@ -61,5 +61,4 @@
             style="@style/purpose_text_style"
             android:text="@string/main_activity_purpose_text" />
     </LinearLayout>
-
 </ScrollView>

@@ -21,7 +21,6 @@ public class SongsActivity extends AppCompatActivity {
 
         // Set the action bar elevation to 0dp
         getSupportActionBar().setElevation(0);
-
         View header = View.inflate(this, R.layout.header_songs_list_view, null);
 
         // Create an arrayList of an object TrackDetail
