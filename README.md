@@ -10,7 +10,7 @@ Inspired from iPhone Music player
 
 ### UX Design
 
-<img src="https://user-images.githubusercontent.com/32653955/32149884-cfaaf80a-bce1-11e7-8d64-d062b0403669.png" width="275" height="475"> <img src="https://user-images.githubusercontent.com/32653955/32149887-cfd5e308-bce1-11e7-9a43-f2a91d9731d3.png" width="275" height="475"> <img src="https://user-images.githubusercontent.com/32653955/32151970-45a6b93a-bcf7-11e7-8dae-e5a3def4c6f6.png" width="275" height="475"> <img src="https://user-images.githubusercontent.com/32653955/32149882-cf91e8ec-bce1-11e7-84ee-bee0db33f75a.png" width="275" height="475"> <img src="https://user-images.githubusercontent.com/32653955/32149883-cf9f43b6-bce1-11e7-8fdd-e68f0f86446e.png" width="275" height="475"> <img src="https://user-images.githubusercontent.com/32653955/32149885-cfba31a8-bce1-11e7-8278-cc5da64ef86b.png" width="275" height="475">
+<img src="https://user-images.githubusercontent.com/32653955/32149884-cfaaf80a-bce1-11e7-8d64-d062b0403669.png" width="275" height="475"> <img src="https://user-images.githubusercontent.com/32653955/32359992-4e66a042-c028-11e7-804a-09a4e319efd6.png" width="275" height="475"> <img src="https://user-images.githubusercontent.com/32653955/32151970-45a6b93a-bcf7-11e7-8dae-e5a3def4c6f6.png" width="275" height="475"> <img src="https://user-images.githubusercontent.com/32653955/32359991-4e4e5e7e-c028-11e7-88de-b25d85892d14.png" width="275" height="475"> <img src="https://user-images.githubusercontent.com/32653955/32149883-cf9f43b6-bce1-11e7-8fdd-e68f0f86446e.png" width="275" height="475"> <img src="https://user-images.githubusercontent.com/32653955/32149885-cfba31a8-bce1-11e7-8278-cc5da64ef86b.png" width="275" height="475">
 
 ## PROJECT LICENSE
 
